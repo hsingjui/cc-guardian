@@ -21,25 +21,25 @@
 
 ```bash
 # 将二进制文件设为可执行
-chmod +x ccg-linux-x86_64
+chmod +x ccg-linux-x64 # 或 ccg-linux-x64-musl
 
 # 将其移动到 PATH 中的一个目录
-sudo mv ccg-linux-x86_64 /usr/local/bin/ccg
+sudo mv ccg-linux-x64 /usr/local/bin/ccg
 ```
 
 ### macOS
 
 ```bash
 # 将二进制文件设为可执行
-chmod +x ccg-macos-x86_64  # 或 ccg-macos-aarch64 (适用于 Apple Silicon)
+chmod +x ccg-macos-arm64  # 或 ccg-macos-x64
 
 # 将其移动到 PATH 中的一个目录
-sudo mv ccg-macos-x86_64 /usr/local/bin/ccg
+sudo mv ccg-macos-arm64 /usr/local/bin/ccg
 ```
 
 ### Windows
 
-1.  下载 `ccg-windows-x86_64.exe` 文件。
+1.  下载 `ccg-windows-x64.exe` 文件。
 2.  为其创建一个文件夹，例如 `C:\Program Files\ccg`。
 3.  将下载的 `.exe` 文件移动到此文件夹中，并将其重命名为 `ccg.exe`。
 4.  将该文件夹 (`C:\Program Files\ccg`) 添加到系统的 `Path` 环境变量中。
