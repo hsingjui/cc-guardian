@@ -9,6 +9,7 @@ use ccg::{
     i18n::setup_i18n,
 };
 use clap::{Arg, Command as ClapCommand};
+use git2::Repository;
 use rust_i18n::t;
 use std::process;
 
@@ -75,6 +76,23 @@ fn build_cli() -> ClapCommand {
 
 fn run() -> Result<()> {
     let matches = build_cli().get_matches();
+    let subcommand_name = matches.subcommand_name().unwrap_or("");
+
+    // Check if the current directory is a git repository
+    let is_repo = Repository::open(".").is_ok();
+
+    if !is_repo {
+        match subcommand_name {
+            "init" | "create" => {
+                // These commands can proceed as they handle repository initialization
+            }
+            _ => {
+                // For other commands, print a message and exit
+                println!("{}", t!("repo_not_initialized_tip"));
+                return Ok(());
+            }
+        }
+    }
 
     let context = CommandContext::new()?;
 

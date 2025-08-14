@@ -25,10 +25,12 @@ impl<'a> CommitOperations<'a> {
             .repo
             .config()
             .map_err(CheckpointError::GitOperationFailed)?;
-        let name = config.get_str("user.name").unwrap_or("Claude Checkpoint");
+        let name = config
+            .get_str("user.name")
+            .unwrap_or("Claude Code Checkpoint");
         let email = config
             .get_str("user.email")
-            .unwrap_or("claude@checkpoint.local");
+            .unwrap_or("claudecode@checkpoint.local");
 
         Signature::now(name, email).map_err(CheckpointError::GitOperationFailed)
     }
