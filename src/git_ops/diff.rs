@@ -5,7 +5,7 @@
 
 use crate::error::{CheckpointError, Result as CcResult};
 use crate::git_ops::types::{DiffStats, FileChangeInfo};
-use console::{style, Color};
+use console::{Color, style};
 use git2::{Commit, Diff, Repository};
 use std::collections::HashMap;
 

@@ -2,7 +2,7 @@
 
 use crate::error::{CheckpointError, Result as CcResult};
 use chrono::{DateTime, Utc};
-use console::{style, Color};
+use console::{Color, style};
 use git2::{Commit, Oid, Repository, Signature, Tree};
 
 /// Operations related to commit management

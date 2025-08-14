@@ -11,7 +11,7 @@ codegen-units = 1 # 减少并行编译但提升优化效果
 
 
 [dependencies]
-git2 = "0.18"
+git2 = { version = "0.18", features = ["vendored-openssl"] }
 clap = { version = "4.4", features = ["derive"] }
 chrono = { version = "0.4", features = ["serde"] }
 anyhow = "1.0"
