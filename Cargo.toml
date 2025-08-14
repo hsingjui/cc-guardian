@@ -5,9 +5,11 @@ edition = "2024"
 description = "Claude Code Checkpoint Guardian - A Git-based checkpoint management tool for AI-assisted development"
 
 [profile.release]
-opt-level = 3     # 0-3, 's', 'z'
+opt-level = 'z'   # 0-3, 's', 'z'
 lto = true        # 链接时优化
 codegen-units = 1 # 减少并行编译但提升优化效果
+panic = "abort"   # 在 panic 时直接终止
+strip = true      # 剥离符号信息
 
 
 [dependencies]

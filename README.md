@@ -14,7 +14,7 @@
 
 ## 📦 Installation
 
-1.  Download the appropriate binary for your system from the [Releases](https://github.com/your-username/cc-guardian/releases) page.
+1.  Download the appropriate binary for your system from the [Releases](https://github.com/hsingjui/cc-guardian/releases) page.
 2.  Make the binary executable and move it to a directory in your system's `PATH`.
 
 ### Linux
